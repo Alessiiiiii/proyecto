@@ -6,6 +6,7 @@ public class Move : MonoBehaviour
 {
     public Vector3 newPosition;
     public float speed;
+    public Vector2 inputVector;
 
     // Start is called before the first frame update
     void Start()
@@ -17,29 +18,12 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Game runnig");
-        if (Input.GetKey(KeyCode.P))
-        {
-            Debug.Log("Key P preseed");
-            transform.position = newPosition;
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(0f, 0f, speed);
-        }
+        inputVector.x = Input.GetAxis("Horizontal");
+        inputVector.y = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(0f, 0f, -speed);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(speed, 0f, 0f);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(-speed, 0f, 0f);
-        }
+        transform.Translate(inputVector.x*speed,0f, inputVector.y*speed);
+
+       
     }
 
 }

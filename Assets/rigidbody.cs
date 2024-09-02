@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class rigidbody : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class rigidbody : MonoBehaviour
     public Rigidbody Rigidbody;
     public float velocityMagnitude;
     public bool CanJump;
+    public int collectedItems;
+
+    public TMPro.TextMeshProUGUI scoreText;
     
     // Start is called before the first frame update
     void Start()
@@ -54,8 +58,17 @@ public class rigidbody : MonoBehaviour
             Debug.Log("Kill Mee");
             SceneManager.LoadScene(0);
         }
-        if (collision.gameObject.CompareTag("Goal"){
-            SceneManager.L
+        if (collision.gameObject.CompareTag("Goal")){
+            SceneManager.LoadScene(1);
+        }
+
+        if (collision.gameObject.CompareTag("item"))
+        {
+            Destroy(collision.gameObject);
+
+            collectedItems ++;
         }
     }
+
+
 }

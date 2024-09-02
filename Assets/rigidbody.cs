@@ -59,7 +59,7 @@ public class rigidbody : MonoBehaviour
             SceneManager.LoadScene(0);
         }
         if (collision.gameObject.CompareTag("Goal")){
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Win");
         }
 
         if (collision.gameObject.CompareTag("item"))

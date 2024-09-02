@@ -275,6 +275,8 @@ MonoBehaviour:
   Rigidbody: {fileID: 0}
   velocityMagnitude: 0
   CanJump: 0
+  collectedItems: 0
+  scoreText: {fileID: 0}
 --- !u!1 &187728623
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +536,8 @@ MonoBehaviour:
   Rigidbody: {fileID: 0}
   velocityMagnitude: 0
   CanJump: 0
+  collectedItems: 0
+  scoreText: {fileID: 0}
 --- !u!114 &321373053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,8 +757,8 @@ Transform:
   m_GameObject: {fileID: 514904681}
   serializedVersion: 2
   m_LocalRotation: {x: -0.69840413, y: -0, z: -0, w: 0.71570367}
-  m_LocalPosition: {x: -37.9958, y: -10.5, z: -7.6265}
-  m_LocalScale: {x: 195.56447, y: -155.62062, z: 1.8428917}
+  m_LocalPosition: {x: -40.6539, y: -10.5, z: 2.1251}
+  m_LocalScale: {x: 109.432655, y: 200, z: 1.8428917}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1691,7 +1695,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.07011446, w: 0.997539}
   m_LocalPosition: {x: -77.9, y: -5.4, z: -26.7}
-  m_LocalScale: {x: -7.137961, y: 1, z: 50.348843}
+  m_LocalScale: {x: 10, y: 1, z: 50.348843}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

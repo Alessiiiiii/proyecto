@@ -67,6 +67,7 @@ public class rigidbody : MonoBehaviour
             Destroy(collision.gameObject);
 
             collectedItems ++;
+            scoreText.text=collectedItems.ToString();
         }
     }
 
